@@ -1,0 +1,33 @@
+Lab2.txt
+
+
+Group name: Mustard
+
+Members:
+
+Rocherno de Jongh
+Andy Lau
+Kyle Foss
+Colin Rabe
+
+Table:
+Inventory - keep track of inventory the store has
+Sales - keep track of sales 
+Total_Sale - keep track of total amount made
+Employee = keep track of employee information
+Timesheet = keep track of employee’s hours
+Cost = keep track of revenue/loss
+
+Inventory = {primary key(AUTO_INCREMENT, NOT NULL), product name(TEXT) , product description(TEXT),  amount(INT), cost of product(INT)}
+Sales = {primary key_sales(AUTO_INCREMENT, NOT NULL), foreign key_product(INT), amount_sold(INT)}
+Total_Sale = {primary key_total sale(AUTO_INCREMENT, NOT NULL), transaction amount(INT(0,2))}
+Employee = {primary key_employee(”,’’) employee name (TEXT), employee phone number (Int), employee address/email address (TEXT), employee contact information (INT), employee hourly salary (INT)}
+Timesheet = {primary key_timesheet, foreign key_employee, start_time(TIME), break(TIME), after_break(TIME), end_time(TIME), date(DATE), amount_of_hours_worked(INT)}
+Cost = {primary key_cost, total_cost_product_sold decimal(5,2), total_cost_employees(5,2)}
+
+Relationship
+Sales interacts with inventory, every time an item is sold, it should reflect that in the inventory.
+total_sale interacts with sales, it takes the amount of the products sold times the price of the product and add the total amount to total sale.
+Cost interacts with sales, employee and timesheet, every time a product is sold it takes the cost of the product. It also takes the amount that the employee worked, times the amount they make.
+
+
